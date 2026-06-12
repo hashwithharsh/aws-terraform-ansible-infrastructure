@@ -1,0 +1,17 @@
+- name: Install Apache
+  ansible.builtin.package:
+    name: "{{ apache_package_name }}"
+    state: present
+
+- name: Start Apache
+  ansible.builtin.service:
+    name: "{{ apache_service_name }}"
+    state: started
+    enabled: true
+
+- name: Deploy Apache page
+  ansible.builtin.copy:
+    content: "Apache managed by Ansible on {{ inventory_hostname }}\n"
+    dest: /var/www/html/index.html
+    mode: '0644'
+  notify: Restart apache
