@@ -1,0 +1,2 @@
+common_packages_debian: [curl, git, unzip, rsync, python3, vim]
+common_packages_redhat: [curl, git, unzip, rsync, python3, vim-enhanced]

@@ -1,0 +1,13 @@
+[Unit]
+Description={{ app_name }} simple web app
+After=network.target
+
+[Service]
+Type=simple
+User={{ app_user }}
+WorkingDirectory={{ app_dir }}
+ExecStart=/usr/bin/python3 -m http.server 8080 --bind 127.0.0.1
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
