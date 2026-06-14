@@ -1,0 +1,3 @@
+data_dir: /opt/data
+temp_dir: /tmp
+temp_file_age: 7d

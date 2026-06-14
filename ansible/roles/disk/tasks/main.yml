@@ -1,0 +1,22 @@
+- name: Check disk usage
+  ansible.builtin.command: df -hT
+  changed_when: false
+
+- name: Create application data directory
+  ansible.builtin.file:
+    path: "{{ data_dir }}"
+    state: directory
+    mode: '0755' 
+
+- name: Clean old temp files
+  ansible.builtin.find:
+    paths: "{{ temp_dir }}"
+    age: "{{ temp_file_age }}"
+    file_type: file
+  register: old_temp_files
+
+- name: Remove old temp files
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    state: absent
+  loop: "{{ old_temp_files.files }}"
