@@ -1,0 +1,3 @@
+cron_package: "{{ 'cron' if ansible_os_family == 'Debian' else 'cronie' }}"
+cron_service: "{{ 'cron' if ansible_os_family == 'Debian' else 'crond' }}"
+backup_command: "echo backup job placeholder >> /var/log/backup-job.log"

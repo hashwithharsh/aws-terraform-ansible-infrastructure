@@ -1,0 +1,17 @@
+- name: Install cron service
+  ansible.builtin.package:
+    name: "{{ cron_package }}"
+    state: present
+
+- name: Enable cron service
+  ansible.builtin.service:
+    name: "{{ cron_service }}"
+    state: started
+    enabled: true
+
+- name: Add backup cron job
+  ansible.builtin.cron:
+    name: "daily backup check"
+    minute: "0"
+    hour: "2"
+    job: "{{ backup_command }}"

@@ -1,0 +1,7 @@
+galaxy_info:
+  author: Harsh Yadav
+  description: Reusable role for cron server administration tasks
+  license: MIT
+  min_ansible_version: "2.14"
+
+dependencies: []

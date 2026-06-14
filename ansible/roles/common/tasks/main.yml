@@ -1,0 +1,21 @@
+- name: Install common Debian packages
+  ansible.builtin.apt:
+    name: "{{ common_packages_debian }}"
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+  when: ansible_os_family == "Debian"
+
+- name: Install common RedHat packages
+  ansible.builtin.dnf:
+    name: "{{ common_packages_redhat }}"
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Set useful shell history settings
+  ansible.builtin.blockinfile:
+    path: /etc/bash.bashrc
+    block: |
+      export HISTTIMEFORMAT="%F %T "
+    create: false
+  when: ansible_os_family == "Debian"
