@@ -1,0 +1,24 @@
+- name: Install firewall package
+  ansible.builtin.package:
+    name: "{{ firewall_package }}"
+    state: present
+
+- name: Allow SSH with UFW
+  community.general.ufw:
+    rule: allow
+    port: '22'
+    proto: tcp
+  when: firewall_type == "ufw"
+
+- name: Allow HTTP with UFW
+  community.general.ufw:
+    rule: allow
+    port: '80'
+    proto: tcp
+  when: firewall_type == "ufw"
+
+- name: Enable UFW
+  community.general.ufw:
+    state: enabled
+    policy: deny
+  when: firewall_type == "ufw"

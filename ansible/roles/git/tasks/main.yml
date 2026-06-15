@@ -1,0 +1,16 @@
+- name: Install Git
+  ansible.builtin.package:
+    name: git
+    state: present
+
+- name: Set Git editor for root
+  ansible.builtin.command: git config --global core.editor vi
+  changed_when: false
+
+- name: Clone an application repository
+  ansible.builtin.git:
+    repo: "{{ app_repo }}"
+    dest: "{{ app_repo_dest }}"
+    version: "{{ app_repo_version }}"
+    update: true
+  when: app_repo | length > 0
