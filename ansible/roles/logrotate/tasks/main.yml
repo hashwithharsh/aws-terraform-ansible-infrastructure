@@ -1,0 +1,17 @@
+- name: Install logrotate
+  ansible.builtin.package:
+    name: logrotate
+    state: present
+
+- name: Add app log rotation rule
+  ansible.builtin.copy:
+    dest: /etc/logrotate.d/{{ app_name }}
+    mode: '0644'
+    content: |
+      {{ app_log_path }} {
+        daily
+        rotate 7
+        compress
+        missingok
+        notifempty
+      }
