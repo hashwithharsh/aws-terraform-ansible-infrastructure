@@ -1,0 +1,17 @@
+- name: Check uptime
+  ansible.builtin.command: uptime
+  changed_when: false
+
+- name: Check memory
+  ansible.builtin.command: free -m
+  changed_when: false
+
+- name: Check failed systemd services
+  ansible.builtin.command: systemctl --failed --no-pager
+  changed_when: false
+
+- name: Check HTTP service
+  ansible.builtin.uri:
+    url: "{{ health_url }}"
+    status_code: 200
+  when: health_url | length > 0
