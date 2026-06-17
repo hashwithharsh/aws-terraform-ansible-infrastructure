@@ -1,0 +1,5 @@
+admin_user: devops
+admin_groups: []
+admin_ssh_key: ""
+admin_shell: /bin/bash
+remove_user: ""
