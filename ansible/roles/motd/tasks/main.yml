@@ -1,0 +1,7 @@
+- name: Install login MOTD
+  ansible.builtin.copy:
+    content: |
+      Managed server: {{ inventory_hostname }}
+      Managed by Ansible
+    dest: /etc/motd
+    mode: '0644' 

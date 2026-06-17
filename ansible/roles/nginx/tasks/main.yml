@@ -1,0 +1,17 @@
+- name: Install Nginx
+  ansible.builtin.package:
+    name: nginx
+    state: present
+
+- name: Start Nginx
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: true
+
+- name: Deploy Nginx page
+  ansible.builtin.copy:
+    content: "Nginx managed by Ansible on {{ inventory_hostname }}\n"
+    dest: /usr/share/nginx/html/index.html
+    mode: '0644'
+  notify: Restart nginx
