@@ -1,0 +1,2 @@
+extra_packages: [curl, wget, htop]
+package_to_remove: ""

@@ -1,0 +1,17 @@
+- name: Update all Debian packages
+  ansible.builtin.apt:
+    name: '*'
+    state: latest
+    update_cache: true
+  when: ansible_os_family == "Debian"
+
+- name: Install selected tools
+  ansible.builtin.package:
+    name: "{{ extra_packages }}"
+    state: present
+
+- name: Remove unused package
+  ansible.builtin.package:
+    name: "{{ package_to_remove }}"
+    state: absent
+  when: package_to_remove | length > 0
