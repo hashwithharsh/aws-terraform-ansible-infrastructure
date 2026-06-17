@@ -1,0 +1,2 @@
+systemd_service_name: demo-task
+restart_service: false
