@@ -1,0 +1,11 @@
+[Unit]
+Description={{ systemd_service_name }} managed by Ansible
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/{{ systemd_command | default("sleep 3600") }}
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
