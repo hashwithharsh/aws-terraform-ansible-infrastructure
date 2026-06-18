@@ -1,0 +1,6 @@
+---
+- name: Set server hostname
+  hosts: all
+  become: true
+  roles:
+    - hostname

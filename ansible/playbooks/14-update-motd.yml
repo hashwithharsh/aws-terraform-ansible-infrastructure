@@ -1,0 +1,6 @@
+---
+- name: Update server MOTD
+  hosts: all
+  become: true
+  roles:
+    - motd

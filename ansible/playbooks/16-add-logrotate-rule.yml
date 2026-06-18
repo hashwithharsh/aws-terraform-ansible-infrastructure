@@ -1,0 +1,6 @@
+---
+- name: Add application log rotation
+  hosts: all
+  become: true
+  roles:
+    - logrotate

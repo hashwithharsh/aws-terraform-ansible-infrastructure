@@ -1,0 +1,6 @@
+---
+- name: Add a simple scheduled job
+  hosts: all
+  become: true
+  roles:
+    - cron

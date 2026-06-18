@@ -1,0 +1,6 @@
+---
+- name: Enable cron service
+  hosts: all
+  become: true
+  roles:
+    - cron

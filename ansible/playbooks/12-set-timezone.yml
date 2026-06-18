@@ -1,0 +1,6 @@
+---
+- name: Set server timezone
+  hosts: all
+  become: true
+  roles:
+    - timezone

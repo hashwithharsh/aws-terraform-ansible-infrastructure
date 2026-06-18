@@ -1,0 +1,6 @@
+---
+- name: Clone an application repository
+  hosts: all
+  become: true
+  roles:
+    - git

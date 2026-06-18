@@ -1,0 +1,6 @@
+---
+- name: Install logrotate
+  hosts: all
+  become: true
+  roles:
+    - logrotate
