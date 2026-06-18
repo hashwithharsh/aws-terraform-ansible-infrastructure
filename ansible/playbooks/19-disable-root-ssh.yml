@@ -1,0 +1,6 @@
+---
+- name: Disable root SSH login
+  hosts: all
+  become: true
+  roles:
+    - ssh

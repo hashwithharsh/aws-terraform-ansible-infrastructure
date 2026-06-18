@@ -1,0 +1,6 @@
+---
+- name: Validate SSH configuration
+  hosts: all
+  become: true
+  roles:
+    - ssh

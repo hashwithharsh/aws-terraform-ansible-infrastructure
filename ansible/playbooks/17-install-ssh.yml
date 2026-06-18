@@ -1,0 +1,6 @@
+---
+- name: Install OpenSSH server
+  hosts: all
+  become: true
+  roles:
+    - ssh

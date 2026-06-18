@@ -1,0 +1,6 @@
+---
+- name: Enable UFW with deny default
+  hosts: all
+  become: true
+  roles:
+    - firewall

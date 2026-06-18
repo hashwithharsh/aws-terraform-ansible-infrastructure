@@ -1,0 +1,6 @@
+---
+- name: Install firewall
+  hosts: all
+  become: true
+  roles:
+    - firewall

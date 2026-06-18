@@ -1,0 +1,6 @@
+---
+- name: Allow SSH in UFW
+  hosts: all
+  become: true
+  roles:
+    - firewall

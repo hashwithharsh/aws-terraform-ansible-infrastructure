@@ -1,0 +1,6 @@
+---
+- name: Allow HTTP in UFW
+  hosts: all
+  become: true
+  roles:
+    - firewall
