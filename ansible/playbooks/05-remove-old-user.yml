@@ -1,0 +1,6 @@
+---
+- name: Remove an old user
+  hosts: all
+  become: true
+  roles:
+    - users

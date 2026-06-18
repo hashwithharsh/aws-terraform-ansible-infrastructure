@@ -1,0 +1,6 @@
+---
+- name: Add an SSH public key
+  hosts: all
+  become: true
+  roles:
+    - users

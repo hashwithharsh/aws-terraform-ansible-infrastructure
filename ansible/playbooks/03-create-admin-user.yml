@@ -1,0 +1,6 @@
+---
+- name: Create an admin user
+  hosts: all
+  become: true
+  roles:
+    - users

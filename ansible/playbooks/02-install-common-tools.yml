@@ -1,0 +1,6 @@
+---
+- name: Install common admin tools
+  hosts: all
+  become: true
+  roles:
+    - common

@@ -1,0 +1,6 @@
+---
+- name: Gather server facts
+  hosts: all
+  become: true
+  roles:
+    - ansible.builtin.setup
