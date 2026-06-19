@@ -1,0 +1,11 @@
+---
+- name: Base Linux server setup
+  hosts: all
+  become: true
+  roles:
+    - common
+    - users
+    - timezone
+    - hostname
+    - motd
+    - packages

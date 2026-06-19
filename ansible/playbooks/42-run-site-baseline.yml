@@ -1,0 +1,7 @@
+---
+- name: Run common baseline
+  hosts: all
+  become: true
+  tasks:
+  ansible.builtin.include_role:
+    name: common

@@ -1,0 +1,6 @@
+---
+- name: Start application service
+  hosts: all
+  become: true
+  roles:
+    - app

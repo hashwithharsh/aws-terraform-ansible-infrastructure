@@ -1,0 +1,7 @@
+---
+- name: Run web server setup
+  hosts: all
+  become: true
+  tasks:
+  ansible.builtin.include_role:
+    name: apache

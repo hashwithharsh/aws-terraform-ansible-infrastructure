@@ -1,0 +1,17 @@
+---
+- name: Run full server setup
+  hosts: all
+  become: true
+  tasks:
+  ansible.builtin.include_role:
+    name: common
+
+- name: Configure users
+  hosts: all
+  become: true
+  roles:
+    - users
+    - apache
+    - cron
+    - logrotate
+    - health

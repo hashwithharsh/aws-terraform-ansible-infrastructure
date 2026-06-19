@@ -1,0 +1,13 @@
+---
+- name: Run SSH and firewall baseline
+  hosts: all
+  become: true
+  tasks:
+  ansible.builtin.include_role:
+    name: ssh
+
+- name: Configure firewall
+  hosts: all
+  become: true
+  roles:
+    - firewall
