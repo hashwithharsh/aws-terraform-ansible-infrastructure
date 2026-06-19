@@ -1,0 +1,6 @@
+---
+- name: Check local HTTP endpoint
+  hosts: all
+  become: true
+  roles:
+    - health

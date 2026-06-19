@@ -1,0 +1,6 @@
+---
+- name: Check failed services
+  hosts: all
+  become: true
+  roles:
+    - health

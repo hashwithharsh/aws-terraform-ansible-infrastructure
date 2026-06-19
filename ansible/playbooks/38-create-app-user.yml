@@ -1,0 +1,6 @@
+---
+- name: Create application user
+  hosts: all
+  become: true
+  roles:
+    - app

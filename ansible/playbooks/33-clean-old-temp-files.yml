@@ -1,0 +1,6 @@
+---
+- name: Find and remove old temp files
+  hosts: all
+  become: true
+  roles:
+    - disk

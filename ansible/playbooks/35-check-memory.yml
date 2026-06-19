@@ -1,0 +1,6 @@
+---
+- name: Check memory usage
+  hosts: all
+  become: true
+  roles:
+    - health

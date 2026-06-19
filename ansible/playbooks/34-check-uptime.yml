@@ -1,0 +1,6 @@
+---
+- name: Check server uptime
+  hosts: all
+  become: true
+  roles:
+    - health

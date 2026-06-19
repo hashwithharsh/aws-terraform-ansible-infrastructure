@@ -1,0 +1,6 @@
+---
+- name: Install application systemd unit
+  hosts: all
+  become: true
+  roles:
+    - app
