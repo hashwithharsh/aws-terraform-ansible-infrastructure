@@ -1,0 +1,6 @@
+---
+- name: Create application data directory
+  hosts: all
+  become: true
+  roles:
+    - disk

@@ -1,0 +1,6 @@
+---
+- name: Install extra packages
+  hosts: all
+  become: true
+  roles:
+    - packages

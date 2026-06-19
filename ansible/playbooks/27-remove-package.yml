@@ -1,0 +1,6 @@
+---
+- name: Remove an unused package
+  hosts: all
+  become: true
+  roles:
+    - packages

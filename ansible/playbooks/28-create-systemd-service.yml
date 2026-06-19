@@ -1,0 +1,6 @@
+---
+- name: Create systemd service
+  hosts: all
+  become: true
+  roles:
+    - systemd

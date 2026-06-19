@@ -1,0 +1,6 @@
+---
+- name: Update Debian packages
+  hosts: all
+  become: true
+  roles:
+    - packages

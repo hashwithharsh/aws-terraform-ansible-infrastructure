@@ -1,0 +1,6 @@
+---
+- name: Check disk usage
+  hosts: all
+  become: true
+  roles:
+    - disk
