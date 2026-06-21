@@ -17,3 +17,18 @@ variable "instance_type" {
   type        = string
   default     = "t3.micro"
 }
+
+variable "vpc_cidr" {
+  type        = string
+  description = "CIDR range for the VPC"
+}
+
+variable "public_subnet_cidr" {
+  type        = string
+  description = "CIDR range for the public subnet"
+}
+
+variable "private_subnet_cidr" {
+  type        = string
+  description = "CIDR range for the private subnet"
+}
