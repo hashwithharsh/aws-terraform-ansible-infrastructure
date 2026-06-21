@@ -1,0 +1,18 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+crash.*.log
+
+# Ansible
+ansible/inventory/*.ini
+ansible/inventory/*.yml
+*.retry
+
+# Secrets
+*.pem
+*.key
+.env
