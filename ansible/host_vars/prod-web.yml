@@ -1,0 +1,5 @@
+---
+server_hostname: prod-web
+admin_user: devops
+admin_groups: [sudo]
+health_url: http://127.0.0.1
