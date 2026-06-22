@@ -1,4 +1,4 @@
-# AWS Infrastructure with Terraform & Ansible
+# AWS Infrastructure with Terraform + Ansible & Ansible
 
 This is my hands-on AWS infrastructure project built while learning Terraform
 and Ansible. I used Terraform for the AWS resources and Ansible for the Linux
