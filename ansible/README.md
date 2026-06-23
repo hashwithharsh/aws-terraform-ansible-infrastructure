@@ -2,7 +2,7 @@
 
 This directory is my practical Ansible reference for the Linux and DevOps tasks
 I expect to repeat while managing servers. The project uses small playbooks for
-individual jobs and reusable roles for common server configuration.
+individual jobs and reusable Ansible roles for common server configuration.
 
 ## Layout
 
@@ -12,7 +12,7 @@ ansible/
 ├── host_vars/      host-specific examples
 ├── group_vars/     shared variables
 ├── playbooks/      small day-to-day jobs
-├── roles/          reusable server configuration
+├── Ansible roles/          reusable server configuration
 └── collections/    collection requirements
 ```
 
@@ -58,3 +58,4 @@ longer troubleshooting notes in `../issues/ansible/`.
 
 The inventory files are examples. Do not commit private keys, passwords, tokens,
 real production inventory values or other secrets.
+- Prefer tag-based runs for partial apply
