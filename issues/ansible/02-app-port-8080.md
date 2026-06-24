@@ -19,3 +19,5 @@ I kept 8080 bound to 127.0.0.1 and exposed only Apache on port 80.
 ## What I learned
 
 Not every listening port needs to be reachable from the internet.
+
+Seen when state lock is held by another process.
